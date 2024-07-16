@@ -1,0 +1,224 @@
+@import "../../../../../styles/colors.css";
+
+.header-line {
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 25px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    color: var(--text-grey)
+}
+
+.header-content label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-grey)
+}
+
+.header-content .static-span {
+    margin: 0 20px;
+    font-style: italic;
+    color: var(--text-grey)
+}
+
+.input-field {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-field label {
+    display: block;
+}
+
+.selected-image-info {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.input-field input[type="text"],
+.input-field textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    margin-top: 15px;
+}
+
+.selected-image-info span {
+    margin-right: 5px;
+}
+
+.remove-icon {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.remove-icon:hover {
+    text-decoration: underline;
+}
+
+.select-image-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.select-image-button:hover {
+    background-color: #0056b3;
+}
+
+.show-image {
+    padding: 0 10px;
+}
+
+.trans-button {
+    padding: 6px 5px !important;
+    background-color: #fff !important;
+    color: var(--orange-bold);
+    border: 2px solid var(--orange-bold);
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.edit-mode {
+    background-color: var(--green-bold) !important;
+    color: white;
+    border: 2px solid var(--green-bold);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 22px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #007bff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.switch-container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+}
+
+.switch-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 17px;
+}
+
+.switch-button {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 13px;
+}
+
+.switch-checkbox:checked+.switch-label {
+    background-color: #A0DDFF;
+}
+
+.switch-checkbox:checked+.switch-label .switch-button {
+    transform: translateX(55px);
+}
+
+.switch-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.switch-text-on {
+    left: 8px;
+    color: var(--text-grey)
+}
+
+.switch-text-off {
+    right: 8px;
+}
+
+.switch-checkbox:not(:checked) + .switch-label .switch-text-on,
+.switch-checkbox:checked + .switch-label .switch-text-off {
+  display: none;
+}
+
+.read-only {
+    background-color: #f0f0f0;
+    color: #999;
+    border: 1px solid #ccc;
+}

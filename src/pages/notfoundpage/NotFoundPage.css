@@ -1,0 +1,40 @@
+@import '../../../styles/colors.css';
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #333;
+}
+
+.not-found-code {
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.not-found-message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.not-found-link {
+  background-color: #ff8800;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-link:hover {
+  background-color: #ff7b00;
+}

@@ -1,0 +1,26 @@
+:root {
+    --header-bar: #0E0E54;
+    --border-bold: #acacac;
+    --border-grey: #D9D9D9;
+    --border-orange: #F3724A;
+    --sidebar: #0E0E54;
+    --border-light: #d9d9d9;
+    --text-light: #acacac;
+    --text-white: #ffffff;
+    --text-real: #656565;
+    --text-black: #000000;
+    --text-grey: #525252;
+    --background-flow-element: #5f5f5f;
+    --orange-light: #ff922e;
+    --orange-bold: #F3724A;
+    --red-light: #FF7070;
+    --red-bold: #c9302c;
+    --blue-light: #4AB6F3;
+    --green-light: #44BF8C;
+    --green-bold: #45a049;
+    --light-background: #eeeeee;
+    --orange-background: #F3724A;
+    --light2-background:rgb(189, 187, 187);
+    --zeambi-primary-color-pink: #cd4398;
+    --zeambi-primary-color-green: #115c61;
+}

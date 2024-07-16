@@ -1,0 +1,62 @@
+@import "../../../../../styles/colors.css";
+
+.date-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.date-button {
+    padding: 10px 20px;
+    border: 1px solid var(--text-real);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--text-real);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 13px;
+}
+
+.date-button.active {
+    background-color: var(--orange-bold);
+    color: white;
+    border-color: var(--orange-bold);
+}
+
+.report-table {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--border-grey);
+    background-color: white;
+}
+
+td,
+th {
+    border-left: 1px solid var(--border-grey);
+    border-right: 1px solid var(--border-grey);
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+}
+
+th:first-child,
+td:first-child {
+    border-left: none;
+    padding-left: 10px;
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+    padding-right: 10px;
+}

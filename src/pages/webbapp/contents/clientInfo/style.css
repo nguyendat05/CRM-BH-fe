@@ -1,0 +1,14 @@
+@import "../../../../../styles/colors.css";
+
+.filters-text{
+    font-weight: bold;
+    font-size: 13px;
+    background-color: var(--light-webapp-background);
+    border: solid 1px var(--zeambi-primary-color-green);
+    width: 250px;
+}
+
+.list-order{
+    max-height: calc(93vh - 90px);
+    overflow: auto;
+}

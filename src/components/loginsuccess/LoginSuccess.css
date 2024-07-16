@@ -1,0 +1,33 @@
+@import '../../../styles/colors.css';
+
+.auth-callback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+    background-color: var(--light-background);
+  }
+  
+  .auth-callback-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: var(--orange-bold) !important;
+    transition: width 0.2s ease-in-out;
+  }
+  

@@ -1,0 +1,37 @@
+@import "../../../../../styles/colors.css";
+
+.content-main {
+    padding: 0px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--border-grey);
+    color: var(--orange-bold);
+}
+
+.search-bar input::placeholder {
+    color: var(--orange-bold);
+}
+
+.total-clients {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.client-details {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}

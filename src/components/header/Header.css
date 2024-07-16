@@ -1,0 +1,209 @@
+@import "../../../styles/colors.css";
+
+.header {
+	display: flex;
+	justify-content: center;
+	background-color: var(--header-bar);
+	width: 100%;
+	height: 7vh;
+	border: 1px solid #f7a934;
+}
+
+.header_container {
+	display: flex;
+	justify-content: space-between;
+	width: 98%;
+	height: 100%;
+}
+
+.header_logo {
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 10px;
+	margin-top: 4px;
+}
+
+.header_logo img {
+	width: 2.6em;
+}
+
+.header_logo span {
+	color: white;
+	font-size: 0.9em;
+}
+
+.header_general-function {
+	display: flex;
+	justify-content: space-between;
+	width: 82.5%;
+	height: 100%;
+}
+
+.header_general-function-left {
+	display: flex;
+	align-items: center;
+	width: 80%;
+}
+
+.header_general-function-left a {
+	color: var(--text-light);
+	width: 150px;
+	height: 70%;
+	background-color: transparent;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header_general-function-left a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 3px;
+	background-color: transparent;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+
+.header_general-function-left .header_button-selected {
+	color: white;
+	font-weight: bold;
+}
+
+.header_general-function-left .header_button-selected::after {
+	bottom: 0;
+	background-color: var(--orange-light);
+}
+
+.header_general-function-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 25%;
+}
+
+.header_general-function-right-status {
+	display: flex;
+	justify-content: space-between;
+	width: 50px;
+	color: white;
+}
+
+.header_general-function-right-status img {
+	width: 20px;
+}
+
+.header_general-function-right-settings button {
+	width: 50px;
+	border: none;
+	background-color: transparent;
+}
+
+.header_general-function-right-username {
+	width: max-content;
+	color: white;
+}
+
+.header_search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+	height: 28px;
+	padding: 8px
+}
+
+.user-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.user-info span {
+	color: white;
+}
+
+.user-info img {
+	width: 2.3em;
+	border-radius: 5px;
+	height: 70%;
+	margin-left: 0.5em;
+}
+
+.header_general-function-right-avatar {
+	display: flex;
+	justify-content: flex-end;
+	width: 50px;
+}
+
+.profile-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.profile-image {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: white;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.315);
+}
+
+.dropdown-menu button {
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #dad6d6;
+}
+
+.dropdown-menu button:active {
+	transform: translateY(-1px);
+}
+
+.logout-button:hover {
+	background-color: rgb(255, 0, 0) !important;
+}
+
+.header_dropdown {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+
+.header_dropdown select {
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: var(--header-bar);
+	color: #e74c3c;
+}

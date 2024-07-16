@@ -1,0 +1,120 @@
+@import "../../../../../styles/colors.css";
+
+.item-detail-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 350px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    background-color: #ACACAC;
+    color: white;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.save-button {
+    background-color: #F5992D;
+    color: white;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.popup-content {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+}
+
+.date-picker {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-button {
+    color: white;
+    border: none;
+    padding: 5px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.approve {
+    background-color: #44BF8C;
+}
+
+.clear-cmt {
+    background-color: #4AB6F3;
+}
+
+.reject {
+    background-color: #FF7070;
+}
+
+.action-button:first-child {
+    margin-left: 0px;
+}
+
+.action-button:hover {
+    background-color: #c9302c;
+}

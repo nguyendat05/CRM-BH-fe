@@ -1,0 +1,59 @@
+@import "../../../styles/colors.css";
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--light-background);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3em 1.5em;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.418);
+}
+
+.container p {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container p {
+  margin-bottom: 30px;
+}
+
+.container button {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  background-color: var(--orange-bold);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container button:hover {
+  background-color: var(--orange-light);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

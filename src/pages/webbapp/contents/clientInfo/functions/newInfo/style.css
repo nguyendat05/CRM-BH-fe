@@ -1,0 +1,129 @@
+@import "../../../../../../../styles/colors.css";
+
+.new-item-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.new-item-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-height: 90vh;
+    overflow: auto;
+    color: var(--text-grey)
+}
+
+.new-item-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.new-item-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.new-item-form input,
+.new-item-form textarea,
+.new-item-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.currency-symbol {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+.client-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.client-buttons button {
+    flex: 1 1 calc(33.333% - 8px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.client-buttons button.selected {
+    background-color: var(--orange-light);
+    border-color: var(--text-grey);
+    color: #fff;
+}
+
+.new-item-form .error {
+    color: red;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.new-item-form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-item-form .form-buttons button {
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.new-item-form .form-buttons button[type="submit"] {
+    background-color: var(--green-light);
+}
+
+.new-item-form .form-buttons button[type="submit"]:hover {
+    background-color: var(--green-bold);
+}
+
+.new-item-form .form-buttons button[type="button"] {
+    background-color: var(--red-light);
+}
+
+.new-item-form .form-buttons button[type="button"]:hover {
+    background-color: var(--red-bold);
+}
+
+.new-item-form .billPrice-input {
+    width: calc(100% - 50px);
+}
+
+.new-item-form .billPrice-input + span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}

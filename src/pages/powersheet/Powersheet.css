@@ -1,0 +1,609 @@
+@import "../../../styles/colors.css";
+
+.main {
+  display: flex;
+  height: 93vh;
+  width: 100%;
+  background-color: var(--border-light);
+}
+
+body {
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.doc-viewer-tool {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  padding: 2em 0em 0em 0em;
+}
+
+.file-list {
+  flex-basis: 18%;
+  width: 18%;
+  height: 100%;
+  background-color: var(--sidebar);
+  box-sizing: border-box;
+  transition: flex-basis 0.2s ease-in-out, width 0.2s ease-in-out,
+    padding 0.2s ease-in-out;
+  max-height: 100vh;
+  scrollbar-width: none;
+}
+
+.file-list::-webkit-scrollbar{
+  width: 4px;
+}
+
+.file-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.file-list.collapsed {
+  flex-basis: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.file-list-container {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s;
+  
+}
+
+.file-list-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.button-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7%;
+  border-bottom: 0.5px solid var(--border-bold);
+}
+
+.search-area-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.search-area {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  margin-left: 2em;
+  border: 1px solid var(--border-bold);
+  border-radius: 5px;
+}
+
+.IoMdSearch {
+  margin: 0em 0.5em 0em 0.3em;
+}
+
+.quickSearchIcon {
+  margin: 0em 0em 0em 0.3em;
+  font-size: x-large;
+}
+
+.search-area input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+}
+
+.search-area svg {
+  color: white;
+  font-size: x-large;
+}
+
+.button-collapse-wrap {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-collapse-wrap button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  background-color: transparent;
+  border: none;
+  width: 2em;
+  color: var(--border-bold);
+}
+
+
+.IoIosArrowDropleft:hover {
+  cursor: pointer;
+  color: var(--border-light);
+}
+
+.IoIosArrowDropleft:active {
+  transform: translateY(3px);
+}
+
+.Omanager {
+  display: flex;
+  flex-direction: column;
+}
+
+.Omanager-title {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-white);
+  width: 100%;
+  height: auto;
+  padding: 0.5em 1em;
+  border-bottom: 0.5px solid var(--border-bold);
+  border-top: 0.5px solid var(--border-bold);
+}
+
+.Omanager-title-span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin-left: 1em;
+}
+
+.Omanager-title-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  margin-right: 0.25em;
+}
+
+.button-collapse-extend {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--border-bold);
+}
+
+.Omanager-title-button button:hover {
+  cursor: pointer;
+  color: var(--border-light);
+}
+
+.Omanager-elements {
+  width: 100%;
+  padding: 0.5em 1em 1em 1.3em;
+}
+
+.Omanager-elements.collapsed {
+  display: none;
+}
+
+.Omanager-elements-container {
+  max-height: auto;
+}
+
+.Omanager-elements-container.limited {
+  max-height: 85%;
+  overflow-y: auto;
+}
+
+.Omanager-elements-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Omanager-elements-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.Omanager-elements-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--light-background);
+}
+
+.Omanager-element {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3em;
+  color: var(--text-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.Omanager-element.selected {
+  background-color: var(--light-background);
+  color: var(--text-black);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.Omanager-element.selected:hover {
+  background-color: var(--light-background);
+  color: var(--text-black);
+  border-radius: 5px;
+}
+
+.Omanager-element:hover {
+  color: var(--text-white);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.082);
+  border-radius: 5px;
+}
+
+.Omanager-element-icon {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  margin-right: 0.5em;
+}
+
+.Omanager-element-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.Omanager-elements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Omanager-elements li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+}
+
+.Omanager-elements li.active {
+background-color: #ccc; /* Change this to your desired active state color */
+pointer-events: none; /* This makes the item unclickable */
+}
+
+.element-title-span {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+
+.element-title-save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.element-title-cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.element-title-edit {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  margin-right: 0.5em;
+}
+
+.element-title-delete {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+
+.style-input-edit-title {
+  width: 85%;
+  height: 2em;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  padding: 0em 0em 0em 0.5em;
+}
+
+.element-title-edit:active,
+.element-title-delete:active {
+  transform: translateY(3px);
+}
+
+.powersheet {
+  flex-grow: 1;
+  width: 82%;
+  height: 100%;
+  padding: 1em 2em;
+  transition: padding 0.2s ease-in-out;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.powersheet-container {
+  width: 100%;
+  height: 90%;
+}
+
+.ql-toolbar {
+  background-color: var(--light-background);
+}
+
+.button-save-body-quill {
+  background-color: rgb(187, 255, 0) !important;
+  margin-left: auto !important;
+  width: max-content !important;
+  padding: 0em 1.2em 0em 1.2em !important;
+  color: var(--text-black);
+  border-radius: 5px;
+}
+
+.ql-editor {
+  overflow: auto;
+  font-size: medium;
+  word-break: break-word;
+  background-color: var(--light-background);
+}
+
+.ql-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb {
+  background-color: var(--border-bold);
+  border-radius: 5px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-flow-element);
+}
+
+.ql-tooltip input {
+  display: none;
+}
+
+.button-extend {
+  position: fixed;
+  z-index: 100;
+  top: 3.3em;
+  left: 0.1em;
+}
+
+.button-extend button {
+  font-size: x-large;
+  background-color: transparent;
+  border: none;
+  width: 2em;
+  color: var(--border-bold);
+}
+
+.IoIosArrowDropright:hover {
+  cursor: pointer;
+  color: var(--text-black);
+}
+
+.IoIosArrowDropright:active {
+  transform: translateY(3px);
+}
+
+.create-file {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2em;
+}
+
+.style-input-title {
+  width: 72%;
+  height: 90%;
+  border-radius: 5px;
+  font-size: small;
+  border: none;
+  padding: 0em 0em 0em 0.5em;
+  margin-left: 1em;
+}
+
+.style-input-title:focus {
+  outline: none;
+}
+
+.style-button-save {
+  width: 20%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: medium;
+  cursor: pointer;
+}
+
+.style-button-save.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.style-button-save:hover {
+  transform: translateY(-1px);
+}
+
+.style-button-save:active {
+  transform: translateY(2px);
+}
+
+.general-folder {
+  width: 100%;
+  height: max-content;
+}
+
+.quick-filter-input {
+  padding: 8px 12px;
+  padding-left: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  width: 200px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.quick-filter-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  transform: translateX(40%);
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+/* CSS FOR EXPORT BUTTON */
+.export-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.export-button:hover {
+  background-color: #45a049;
+}
+
+.export-button:active {
+  transform: translateY(2px);
+}
+
+
+/* CSS FOR AG GRID */
+.ag-cell {
+  padding: 5px !important;
+  font-size: 13px !important;
+}
+
+.ag-header-cell {
+  padding: 5px !important;
+
+}
+
+.ag-header-cell-text {
+  font-size: 14px !important;
+}
+
+.ag-row .ag-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-cell-left-align {
+  justify-content: flex-start !important;
+}
+
+.ag-cell-quick-report {
+  font-size: 12px !important;
+}
+
+/* CSS FOR exportData */
+.export-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.export-modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.export-modal label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.export-modal select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.export-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.export-modal-buttons button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.export-modal-buttons .export-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.export-modal-buttons .export-button:hover {
+  background-color: #45a049;
+}
+
+.export-modal-buttons .close-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.export-modal-buttons .close-button:hover {
+  background-color: #da190b;
+}

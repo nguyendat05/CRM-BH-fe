@@ -1,0 +1,137 @@
+@import "../../../styles/colors.css";
+
+.main-webapp {
+    display: block !important;
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 93vh;
+	background-color: #F1F1F1;
+}
+
+.header-webapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.tab-button {
+    appearance: none;
+    cursor: pointer;
+}
+
+.tab-button .menu-icon {
+    color: var(--text-grey);
+    font-size: 30px;
+}
+
+.tab-text {
+    margin-left: 10px;
+    color: var(--text-grey);
+    font-weight: bold;
+}
+
+.tab.active {
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters button {
+    flex: 1;
+    padding: 4px 8px;
+    border: 0.2px solid var(--zeambi-primary-color-green);
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--zeambi-primary-color-green);
+}
+
+.filters button:last-child {
+    margin-right: 0;
+}
+
+.filters button.active {
+    background-color: var(--zeambi-primary-color-pink);
+    color: white;
+    border: 0.2px solid #f5f5f5;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(93vh - 85px);
+    overflow-y: auto;
+}
+
+.item {
+    position: relative;
+    border: 1px solid var(--zeambi-primary-color-green);
+    padding: 16px;
+    background-color: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.list::-webkit-scrollbar {
+    width: 0;
+}
+
+.new {
+    padding: 5px 7px;
+    color: var(--orange-bold);
+    font-weight: bold;
+    border: 1px solid var(--border-orange);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.new:hover {
+    background-color: var(--border-orange);
+    color: white;
+}
+
+.status-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #5F5F5F;
+    background-color: #EBEBEB;
+}
+
+/* CSS FOR SIDE BAR */
+.css-dip3t8 {
+    background-color: var(--header-bar) !important;
+    color: var(--text-grey);
+    border: 1px solid #f7a934;
+}
+
+.css-12w9als {
+    background-color: var(--header-bar) !important;
+    color: var(--text-grey);
+    font-weight: bold;
+}
+
+.css-16jesut >.ps-menu-button:hover {
+    background-color: var(--header-bar) !important;
+    color: var(--text-grey)
+}
+
+.css-1tqrhto {
+    background-color: var(--header-bar) !important;
+    color: var(--text-grey);
+}
+
+.css-1tqrhto >.ps-menu-button:hover {
+    background-color: var(--header-bar) !important;
+    color: var(--text-grey);
+}
